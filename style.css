@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    font-family: 'Inconsolata', monospace;
+
+}
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.title{
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.weather-container{
+    display: flex;
+    align-self: center;
+}
+.form{
+    margin: 0 auto 50px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-search{
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 12px;
+    font-size: 20px;
+}
+.btn {
+    line-height: 40px;
+    font-family: 'Inconsolata', monospace;
+    height: 40px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    color: rgb(163, 11, 0);
+
+}
+.btn-one {
+    color: rgb(163, 11, 0);
+    transition: all 0.3s;
+    position: relative;
+}
+.btn-one span {
+    transition: all 0.3s;
+}
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(84, 44, 255, 0.45);
+    border-bottom-color: rgba(84, 44, 255, 0.45);
+    transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+    letter-spacing: 4px;
+    color: rgb(84, 44, 255);
+
+}
+.btn-one:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(84, 44, 255, 0.45);
+}
+.btn-one:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    font-size: 24px;
+    border: 2px solid rgb(178, 160, 254);
+    border-radius: 5px;
+    padding: 20px;
+}
+.weather-container__img{
+    width: 60px;
+}
+.weather-container__city{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+.weather-container__item{
+    margin-bottom: 30px;
+}
